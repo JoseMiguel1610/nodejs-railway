@@ -1,6 +1,8 @@
-import sql from 'mssql';
-import config from '../config';
-import mongoose from 'mongoose';
+// const sql = require("mssql")
+// import sql from 'mssql';
+// import config from '../config';
+const mongoose = require("mongoose")
+// import mongoose from 'mongoose';
 
 const uri = `mongodb://${process.env.USER}:${process.env.PASSWORD}@containers-us-west-131.railway.app:${process.env.PORT}`
 
@@ -34,5 +36,4 @@ mongoose
 //         console.log(error);
 //     }
 // }
-
-export { sql }
+// module.exports = {sql}
