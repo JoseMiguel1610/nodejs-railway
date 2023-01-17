@@ -1,6 +1,7 @@
-import app from "./app";
-import "./database/connection"
-import cors from 'cors';
+const app = require("./app")
+require("./database/connection")
+const cors = require("cors")
+// import cors from 'cors';
 // Creamos la variable de configuración
 var corsOptions = {
     origin: '*', // Aqui debemos reemplazar el * por el dominio de nuestro front

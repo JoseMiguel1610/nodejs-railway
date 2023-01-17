@@ -1,13 +1,15 @@
-import {Router} from 'express';
-import { createUser, getUserById, getUsers, login, loginUser, register } from '../controllers/users.controller';
+const {Router} = require("express")
+// import {Router} from 'express';
+const usersControllers = require('../controllers/users.controller')
+// import { createUser, getUserById, getUsers, login, loginUser, register } from '../controllers/users.controller';
 const router = Router()
 
 // router.get("/Users", getUsers)
 
 // router.post("/Users", createUser)
-router.post('/register', register)
+router.post('/register', usersControllers.register)
 
-router.post('/login', login)
+router.post('/login', usersControllers.login)
 
 // router.post("/Users/Login", loginUser)
 
@@ -19,4 +21,4 @@ router.post('/login', login)
 
 
 
-export default router
+module.exports = router

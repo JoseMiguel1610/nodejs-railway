@@ -1,9 +1,11 @@
-import {Router} from 'express';
-import { getRoles, registerRoles } from '../controllers/roles.controller';
-import roles from '../schemas/roles';
+const {Router} = require("express")
+// import {Router} from 'express';
+const rolesController = require('../controllers/roles.controller')
+// import { getRoles, registerRoles } from '../controllers/roles.controller';
+// import roles from '../schemas/roles';
 const router = Router()
 
-router.get('/', getRoles)
-router.post('/', registerRoles)
+router.get('/', rolesController.getRoles)
+router.post('/', rolesController.registerRoles)
 
-export default router
+module.exports = router

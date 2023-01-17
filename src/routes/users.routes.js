@@ -1,8 +1,10 @@
-import {Router} from 'express';
-import { deleteUser, getUsersMongo } from '../controllers/users.controller';
+const {Router} = require("express")
+// import {Router} from 'express';
+const usersControllers = require('../controllers/users.controller')
+// import { deleteUser, getUsersMongo } from '../controllers/users.controller';
 const router = Router()
 
-router.get('/',getUsersMongo)
-router.post("/", deleteUser)
+router.get('/', usersControllers.getUsersMongo)
+router.post("/", usersControllers.deleteUser)
 
-export default router
+module.exports = router

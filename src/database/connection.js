@@ -2,10 +2,13 @@ import sql from 'mssql';
 import config from '../config';
 import mongoose from 'mongoose';
 
-const uri = `mongodb://${process.env.USER}:${process.env.PASSWORD}@containers-us-west-131.railway.app/${process.env.DBNAME}:${process.env.PORT}`
+const uri = `mongodb://${process.env.USER}:${process.env.PASSWORD}@containers-us-west-131.railway.app:${process.env.PORT}`
 
 mongoose
-  .connect(uri, { useNewUrlParser: true, useUnifiedTopology: true })
+  .connect(uri, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+  })
   .then(() => {
     console.log('Conectado a la base de datos')
   })
