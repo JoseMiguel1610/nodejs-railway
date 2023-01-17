@@ -7,7 +7,7 @@ import verifyToken from './routes/validate-token';
 
 const app = express()
 
-app.set("port", config.port || 9000)
+app.set("port", 5001)
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
