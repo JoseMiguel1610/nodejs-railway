@@ -10,8 +10,8 @@ const verifyToken = require('./routes/validate-token')
 // import verifyToken from './routes/validate-token';
 
 const app = express()
-
-app.set("port", 5001)
+const PORT = process.env.PORT || 5001;
+app.set("port", PORT)
 
 app.use(express.json())
 app.use(express.urlencoded({extended: false}))
