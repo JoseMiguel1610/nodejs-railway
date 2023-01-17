@@ -1,4 +1,4 @@
-import app from "./app";
+import app from "../src/app";
 import "./database/connection"
 import cors from 'cors';
 // Creamos la variable de configuración
