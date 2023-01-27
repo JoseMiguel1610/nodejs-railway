@@ -1,7 +1,11 @@
 // import mongoose from 'mongoose';
-const mongoose = require("mongoose")
+const mongoose = require("mongoose");
 
 const rolesSchema = mongoose.Schema({
+    id: {
+        type: Number,
+        require: true
+    },
     descripcion: {
         type: String,
         require: true,

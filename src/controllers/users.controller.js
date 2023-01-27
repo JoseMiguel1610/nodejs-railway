@@ -25,6 +25,7 @@ const schemaRegister = Joi.object({
     fechaNacimiento: Joi.date().iso().required(),
     sexo: Joi.string().min(1).max(1024).required(),
     celular: Joi.string().min(9).max(9).required(),
+    token: Joi.string().required(),
     rol: Joi.string().required()
 })
 
@@ -117,6 +118,7 @@ const usersControllers = {
             fechaNacimiento: req.body.fechaNacimiento,
             sexo: req.body.sexo,
             celular: req.body.celular,
+            token: req.body.token,
             rol: req.body.rol
         });
         try {

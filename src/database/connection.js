@@ -2,7 +2,10 @@
 // import sql from 'mssql';
 // import config from '../config';
 const mongoose = require("mongoose")
+require("dotenv").config()
 // import mongoose from 'mongoose';
+
+const uriLocal = `mongodb+srv://${process.env.USER}:${process.env.PASSWORD}@cluster0.qxdwlco.mongodb.net/${process.env.DBNAME}?retryWrites=true&w=majority`
 
 const uri = `mongodb://${process.env.USER}:${process.env.PASSWORD}@containers-us-west-131.railway.app:${process.env.PORT}`
 

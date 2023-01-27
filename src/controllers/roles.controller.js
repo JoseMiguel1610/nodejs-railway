@@ -5,6 +5,7 @@ const Rol = require('../schemas/roles')
 const rolesController = {
     registerRoles: async (req, res) => {
         const rol = new Rol({
+            id: req.body.id,
             descripcion: req.body.descripcion
         });
         try {

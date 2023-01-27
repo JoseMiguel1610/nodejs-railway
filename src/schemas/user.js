@@ -47,6 +47,10 @@ const userSchema = mongoose.Schema({
         min: 9,
         max: 9
     },
+    token: {
+        type: String,
+        require: true,
+    },
     rol: {
         type: mongoose.Types.ObjectId,
     }
