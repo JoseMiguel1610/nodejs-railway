@@ -1,8 +1,9 @@
 const admin = require("firebase-admin");
+const exportConfig = require("./keys/firebase");
 
 function initFirebase() {
-    console.log(__dirname);
-    var serviceAccount = require(__dirname + "/keys/nikoletta-3ad28-firebase-adminsdk-3vku9-2e3f068635.json")
+    var serviceAccount = exportConfig()
+    console.log(serviceAccount);
 
     admin.initializeApp({
         credential: admin.credential.cert(serviceAccount)
